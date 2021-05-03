@@ -30,6 +30,7 @@ func main() {
 	emp1 := employee{1, "arunkumar", "salem"}
 	emp2 := employee{2, "amritha", "coimbatore"}
 	emp3 := employee{3, "golang", "california"}
+	emp4 := employee{4, "sadhamsuperstar", "kulithalai"}
 
 	insert1, err := db.Exec("INSERT INTO emp (id, name, city) VALUES (?, ?, ?)", emp1.id, emp1.name, emp1.city)
 	if err != nil {
@@ -56,6 +57,14 @@ func main() {
 	}
 	id3, _ := insert3.LastInsertId()
 	fmt.Println(id3)
+
+	insert4, err := db.Exec("INSERT INTO emp (id, name, city) VALUES (?, ?, ?)", emp4.id, emp4.name, emp4.city)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	id4, _ := insert4.LastInsertId()
+	fmt.Println(id4)
 
 	// Update a employee
 
