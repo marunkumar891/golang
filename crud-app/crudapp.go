@@ -21,7 +21,7 @@ var (
 )
 
 func main() {
-	db, err := sql.Open("mysql", "arunkumar:Tarus_891@tcp(127.0.0.1:3306)/basic")
+	db, err := sql.Open("mysql", "root:root@tcp(127.0.0.1:3306)/basic")
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -85,12 +85,19 @@ func main() {
 	}
 
 	//delete a single user
-
-	_, err = db.Exec("DELETE FROM emp WHERE id = ?", 1)
-	if err != nil {
-		log.Fatal(err)
-	} else {
-		fmt.Println("deleted from table")
-	}
-
+	/*
+		_, err = db.Exec("DELETE FROM emp WHERE id = ?", 1)
+		if err != nil {
+			log.Fatal(err)
+		} else {
+			fmt.Printf("deleted id : %d from table", 1)
+		}
+		_, err = db.Exec("DELETE FROM emp WHERE id + ?", 4)
+		if err != nil {
+			log.Fatal(err)
+		} else {
+			fmt.Printf("deleted id : %d from table", 4)
+		}
+		//_, err = db.Exec("SELECT * FROM emp")
+	*/
 }
