@@ -11,5 +11,6 @@
 - **Interface**
 - **Basic Server**
 - **MySQL Db connection**
+- **Basic Temporal Application**
 
 ## For more resources visit [Golang](https://golang.org/doc/tutorial/getting-started)
